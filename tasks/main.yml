@@ -88,7 +88,7 @@
       removes="{{ fetch_directory }}/ceph_cluster_uuid.conf"
     changed_when: false
     register: cluster_uuid
-    check_mode: no
+    always_run: true
     become: false
     when:
       - generate_fsid
